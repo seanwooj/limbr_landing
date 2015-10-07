@@ -65,6 +65,13 @@ section .content {
   margin: 0 auto;
 }
 
+/* Phones and small screens */
+@media (max-width: 750px) {
+  section .content {
+    padding-left: 2em; padding-right: 2em;
+  }
+}
+
 section .content h1 {
   font-size: 3rem;
 }

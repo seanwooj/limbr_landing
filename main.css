@@ -1,0 +1,176 @@
+/* if we are to scale this page up any more, then we 
+will want to transition to using scss or some other preprocessor
+in order to maintain better order of all the css */
+
+
+/* This will serve as a de facto place to put the future high level variables.
+for example, the max width of text on a page or some such */
+
+/* max-text-width: 665px; */
+
+
+body {
+  background: white;
+}
+
+/* Main Page Sections */
+
+.masthead {
+  /* background cover is duplicated in the bg-section. should be refactored */
+  background-image: url(background_4.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 600px;
+}
+
+.masthead .masthead-logo {
+  height: 200px; width: 200px;
+}
+
+.masthead .masthead-logotype {
+  text-align: center;
+  color: white;
+  font-family: "Gotham SSm A","Gotham SSm B";
+}
+
+.main {
+
+}
+
+.our-journey {
+  background-image: url(https://images.unsplash.com/photo-1440964829947-ca3277bd37f8?q=80&fm=jpg&s=820fcc9dd26c0ede80f3b1663c543965);
+  color: white;
+  height: 600px;
+}
+
+
+/* Components */
+section {
+  text-align: center;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  padding-top: 140px; padding-bottom: 140px;
+}
+
+section.section-with-centering {
+  padding-top: 0; padding-bottom: 0;
+}
+
+section .content {
+  max-width: 665px;
+  margin: 0 auto;
+}
+
+section .content h1 {
+  font-size: 3rem;
+}
+
+section .content .section-subheader {
+  font-family: "Gotham SSm A","Gotham SSm B";
+  font-weight: 100;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+section .content p {
+  text-align: center;
+}
+
+
+section .content hr {
+  /*width: 20px;*/
+  margin: 0 auto -1px;
+  border-color: #1f1f1f;
+}
+
+
+/* Line Stuff */
+
+section .line {
+  border-left: 1px solid #1f1f1f;
+  height: 200px;
+  margin: 0 auto;
+  width: 1px;
+}
+
+section.section-with-line {
+  padding-bottom: 0;
+}
+
+
+/* Sections with image backgrounds that need vertically centered text */
+
+/* bg-section must have a height
+in order for the vertical centering
+to work correctly */
+
+section.bg-section {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.v-center {
+  display: table;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.v-center .v-center-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.button.cta-button {
+  background: #82cfa8;
+  color: white;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+}
+
+
+/* move these inputs to skeleton.css or a button module */
+input {
+  border: 1px solid black;
+}
+
+input[type='email'] {
+  border-color: transparent;
+  background: #dbefe5;
+  border-radius: 0;
+}
+
+
+
+/* Mixins */
+.subtle-shadow {
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+}
+
+
+/* Footer Stuff */
+
+footer {
+  height: 400px;
+  background: #A3F1E0;
+}
+
+footer .footer-logo {
+  height: 100px;
+}
+
+footer .footer-logotype {
+  text-align: center;
+  color: white;
+  font-family: "Gotham SSm A","Gotham SSm B";
+  font-size: 2em;
+}

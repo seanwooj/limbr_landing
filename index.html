@@ -21,6 +21,31 @@
   <script src='javascripts/jquery-2.1.4.js'></script>
   <script src='javascripts/jquery.color.js'></script>
 
+  <!-- Eventually this should be moved into it's own file -->
+  <script>
+    $(function(){
+      var positionFromTop;
+      var opacity;
+      var bottomOfMasthead = $('.masthead').height();
+      var windowHeight = $(window).height();
+
+      // set the masthead to window height
+      $('.masthead').css({'height': windowHeight + 'px'});
+
+      // want to unbind this when you go past the bottom of the masthead
+      // so that it doesn't keep using system resources calculating this stuff.
+      $(window).on('scroll', function(e){
+        positionFromTop = $(window).scrollTop();
+        opacity = positionFromTop / bottomOfMasthead;
+
+        if ( opacity < 1 ) {
+          $('.masthead-color-overlay').css({'opacity': opacity});
+        }
+      });
+    });
+
+  </script>
+
 
   <body>
 
@@ -40,6 +65,8 @@
   -->
 
   <div class="masthead">
+    <!-- this is filled with a color as the user scrolls down the page -->
+    <div class="masthead-color-overlay"></div>
     <div class="v-center content">
       <div class="v-center-cell">
 

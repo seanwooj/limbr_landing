@@ -26,6 +26,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
   height: 600px;
+  /* This is for the absolutely positioned masthead overlay */
+  position: relative;
 }
 
 .masthead .masthead-logo {
@@ -36,6 +38,21 @@ body {
   text-align: center;
   color: white;
   font-family: "Gotham SSm A","Gotham SSm B";
+}
+
+/* This is needed because we need to give the
+container of the logo and logotype a higher z-index
+than the color-overlay */
+.masthead .v-center {
+  position: relative;
+}
+
+.masthead-color-overlay {
+  height: 100%; width: 100%;
+  background-color: #A3F1E0;
+  top: 0; left: 0; right: 0;
+  position: absolute;
+  opacity: 0;
 }
 
 .main {

@@ -17,7 +17,7 @@ body {
 
 .masthead {
   /* background cover is duplicated in the bg-section. should be refactored */
-  background-image: url(background_4.jpg);
+  background-image: url(../images/background_4.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -43,7 +43,7 @@ body {
 }
 
 .our-journey {
-  background-image: url(background_1.jpg);
+  background-image: url(../images/background_1.jpg);
   color: white;
   height: 600px;
 }
